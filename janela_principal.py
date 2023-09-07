@@ -49,6 +49,12 @@ def mostra_janela_principal():
     label_titulo = tk.Label(frame_titulo_interior, text="Carta Amiga", font=("Radley", 41))
     label_titulo.pack()
 
+     # Supported formats: GIF, PGM, PPM, and PNG
+    #img_porta = ImageTk.PhotoImage("Imagens\\porta.gif")
+
+    #label_img_porta= tk.Label(frame_titulo_interior, image=img_porta)
+    #label_img_porta.pack()
+
     bLogin = tk.Button(frame_titulo_interior, text="Entrar", command=funcaoEntrar)
     bLogin.pack()
 
