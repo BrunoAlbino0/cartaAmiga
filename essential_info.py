@@ -1,7 +1,8 @@
 class UserInfo:
 
-    def __init__(self, name: str, letters: List[Letter], relatives: List[Relatives]):
+    def __init__(self, name: str, password: str, letters: List[Letter], relatives: List[Relatives]):
         self.name = name
+        self.password = password
         self.letters = letters
         self.relatives = relatives
 
