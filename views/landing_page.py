@@ -6,6 +6,8 @@ class LandingPage(Frame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        background_color = "#f6a2a6"
+        self.configure(bg=background_color)
 
         self.grid_columnconfigure(0,weight=1)
 
@@ -23,7 +25,12 @@ class LandingPage(Frame):
         self.btn_Advance.grid(row=0, column=1, padx=10, pady=10)
 
         #Carregar logo
-        #img_auxiliar = Image.open("..\\Imagens\\idoso_ao_computador2.jpg")
-         #img_logo= ImageTk.PhotoImage(img_auxiliar)
-        self.Label_Img_Logo = Label(self, text="Suposto Logo")
-        self.Label_Img_Logo.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
+       # img_auxiliar = Image.open(r"..\Imagens\idoso_ao_computador2.jpg")
+        self.img_auxiliar = Image.open(r"C:\Users\branc\Projetos\Formacao\cartaAmiga\Imagens\idoso_ao_computador2.jpg")
+        self.img_logo= ImageTk.PhotoImage(self.img_auxiliar)
+
+        self.Label_Img_Logo = Label(self, image=self.img_logo)
+        self.Label_Img_Logo.grid(row=1, column=0)
+
+        #self.Label_Teste = Label(self, text="Teste")
+        #self.Label_Img_Logo.grid(row=2, column=0)
