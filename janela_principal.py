@@ -73,9 +73,10 @@ def mostra_janela_principal():
     label_img_logo = tk.Label(frame_logo, image=img_logo)
     label_img_logo.pack()
 
+    return janela_principal # tipo de retorno é do tipo tk.TK
 
     # Run the main loop
-    janela_principal.mainloop()
+    #janela_principal.mainloop()
 
 
 def funcaoEntrar():
