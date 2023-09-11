@@ -1,4 +1,4 @@
-from Models.model import Model
+from Models.Model import Model
 from views.main import View
 
 class LoginPageController:
@@ -19,10 +19,14 @@ class LoginPageController:
         new_password = self.frame.Input_password_unregisted.get()
         print("Clicou para registar com nickname: " + new_nickname + " e password: " +  new_password )
 
+        self.model.user_info_search_by_name(self.model, new_nickname)
+
     def click_login(self):
         login_nickname = self.frame.Input_nickname_registed.get()
         login_password = self.frame.Input_password_registed.get()
         print("Clicou em login com nickname: " + login_nickname + " e password: " + login_password)
+
+        self.model.user_info_search_by_name(self.model, login_nickname)
 
     def click_on_exit(self):
         print("Click Exit")

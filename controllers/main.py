@@ -1,6 +1,6 @@
 from .landingPageController import LadingPageController
 from .loginPageController import LoginPageController
-from Models.model import Model
+from Models.Model import Model
 from views.main import View
 
 class Controller:
