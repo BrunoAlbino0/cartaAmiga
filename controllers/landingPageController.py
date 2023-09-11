@@ -1,3 +1,5 @@
+from Models.model import Model
+from views.main import View
 class LadingPageController:
     def __init__(self, model, view):
         self.model = model

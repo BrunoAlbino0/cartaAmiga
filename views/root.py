@@ -6,6 +6,7 @@ class Root(Tk):
 
         start_width = 800
         min_width = 800
+
         start_height = 900
         min_height = 900
         background_color = "#f6a2a6"
