@@ -18,7 +18,7 @@ class UserInfo(Base):
         self.administrator = administrator
 
 
-connection_string = "mysql+mysqlconnector://root:golfinho@localhost:3306/cartaamiga"
+connection_string = "mysql+mysqlconnector://b3fzksidqav8cwc13x8a:pscale_pw_x0l8zGXZn9RDaB1YvNDwT21qe9XkFS3akOVg0uFqMDB@aws.connect.psdb.cloud:3306/cartaamiga"
 engine = create_engine(connection_string, echo=True)
 Base.metadata.create_all(bind=engine)
 
