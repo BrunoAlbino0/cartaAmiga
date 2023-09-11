@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
 
@@ -8,4 +8,4 @@ class DbSession:
     def __init__(self):
         self.engine = create_engine(self.connection_string, echo=True)
         self.Session = sessionmaker(bind=self.engine)
-        self.session = self.Session()
+        self.dbsession = self.Session()

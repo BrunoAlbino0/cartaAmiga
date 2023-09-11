@@ -46,4 +46,8 @@ class LoginPage(Frame):
         self.Input_password_registed.grid(row=6, column=1, padx=(0, 20), sticky="ew")
 
         self.btn_Login = Button(self, text="Login")
+
         self.btn_Login.grid(row=5, column=2, padx=10, pady=10, rowspan=2)
+
+        self.btn_list_all_users = Button(self, text="List all users")
+        self.btn_list_all_users.grid(row=6, column=2, padx=10, pady=10, rowspan=2)
