@@ -14,6 +14,12 @@ class User_Info_Dao():
         print(search_result)
 
     def user_info_search_by_name(self, user_name):
-        #search_result = self.session.select(UserInfo).where(UserInfo.name == user_name)
-        search_result = self.session.query(UserInfo).all()
+        print("A iniciar procura pelo nome: " + user_name)
+        search_result = self.session.query(UserInfo).where(UserInfo.name == user_name)
         print(search_result)
+
+    def list_all_users(self):
+        search_result = self.session.query(UserInfo).all()
+
+        for record in search_result:
+            print(record.user_info_id, record.name)

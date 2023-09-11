@@ -12,9 +12,17 @@ class Model:
 
     def user_info_search_by_id(self, user_id):
         print("Recebi no modelo: " + user_id)
-        self.user_info_dao.user_info_search_by_id(user_id)
-
+        #self.user_info_dao.user_info_search_by_id(user_id)
 
     def user_info_search_by_name(self, user_name):
         print("Recebi no modelo: " + user_name)
         self.user_info_dao.user_info_search_by_name(user_name)
+
+    def list_all_users(self):
+        print("Pedido para listar todos os utilizadores")
+        self.user_info_dao.list_all_users()
+
+
+#newModel = Model()
+#newModel.user_info_dao.list_all_users()
+
