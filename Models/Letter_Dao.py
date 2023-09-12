@@ -18,7 +18,7 @@ class Letter_Dao():
     def get_all_letters(self):
         #search = "SELECT letter.letter_id, letter.sender_id, letter.title, user_info.name FROM letter INNER JOIN user_info ON letter.sender_id = user_info.user_info_id"
         search_result = self.session.execute(
-            select(Letter.letter_id, Letter.sender_id, Letter.title, Letter.date, UserInfo.name)
+            select(Letter.letter_id, Letter.sender_id, Letter.title, Letter.date, Letter.message, UserInfo.name)
             .join(UserInfo, Letter.sender_id == UserInfo.user_info_id)
             .order_by(Letter.date)
         )
