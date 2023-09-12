@@ -27,8 +27,8 @@ class LetterPageController:
     def click_on_save(self):
         print("Click on save")
 
-        title = self.frame.Input_letter_content.get()
-        message = self.frame.Input_letter_tittle.get()
+        title = self.frame.Input_letter_tittle.get()
+        message = self.frame.Input_letter_content.get()
 
         if len(title) != 0 or len(message) != 0:
             self.model.handle_letter_submition(title, message)

@@ -23,13 +23,14 @@ class Model:
     def handle_user_regist(self, user_name, user_password, administrator):
         if self.user_info_dao.check_user_name_availability(user_name):
             self.user_info_dao.add_user_info(user_name, user_password, administrator)
+
+            self.handle_user_login( user_name, user_password)
         else:
             print("Nome já em uso!")
 
 
-    def handle_user_login(self, user_name, user_passord):
-
-        result = self.user_info_dao.check_user_login(user_name, user_passord)
+    def handle_user_login(self, user_name, user_password):
+        result = self.user_info_dao.check_user_login(user_name, user_password)
         if result > 0:
             self.user_logged = True
             self.user_id = result
@@ -42,3 +43,5 @@ class Model:
         print("Modelo a gravar carta")
         self.letter_dao.add_letter( self.user_id, 0, title, message)
 
+    def handle_letter_request(self):
+        return self.letter_dao.get_all_letters()

@@ -20,6 +20,7 @@ class MenuPageController:
     def click_on_read(self):
         print("Click on read")
         self.view.switch("selectLetterPage")
+        #self.model.handle_letter_request()
 
     def click_on_exit(self):
         print("Click Exit")

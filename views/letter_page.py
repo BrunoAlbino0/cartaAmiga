@@ -23,7 +23,7 @@ class LetterPage(Frame):
         self.Input_letter_content.grid(row=4, padx=(0, 20), sticky="ew")
 
         self.btn_go_back = Button(self, text="Return")
-        self.btn_go_back.grid(row=4, column=0, padx=10, pady=10)
+        self.btn_go_back.grid(row=5, column=0, padx=10, pady=10)
 
         self.btn_save_letter = Button(self, text="Save")
-        self.btn_save_letter.grid(row=4, column=1, padx=10, pady=10)
+        self.btn_save_letter.grid(row=5, column=1, padx=10, pady=10)

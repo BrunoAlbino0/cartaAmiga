@@ -50,4 +50,4 @@ class LoginPage(Frame):
         self.btn_Login.grid(row=5, column=2, padx=10, pady=10, rowspan=2)
 
         self.btn_list_all_users = Button(self, text="List all users")
-        self.btn_list_all_users.grid(row=6, column=2, padx=10, pady=10, rowspan=2)
+        self.btn_list_all_users.grid(row=8, column=1, padx=10, pady=10, rowspan=2)

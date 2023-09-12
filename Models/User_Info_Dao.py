@@ -21,8 +21,11 @@ class User_Info_Dao():
         search_result = self.user_info_search_by_name(name)
         number_of_records = 0
 
-        for record in search_result:
-            number_of_records +=1
+        try:
+            for record in search_result:
+                number_of_records +=1
+        except TypeError:
+            number_of_records = 0
 
         if number_of_records > 0:
             return False
@@ -36,10 +39,14 @@ class User_Info_Dao():
         id_user = 0
         password_from_DB = ""
 
-        for record in search_result:
-            number_of_records += 1
-            id_user = record.user_info_id
-            password_from_DB = record.password
+        try:
+            for record in search_result:
+                number_of_records += 1
+                id_user = record.user_info_id
+                password_from_DB = record.password
+        except TypeError:
+            number_of_records = 0
+            print("Nome do utilizador não encontrado")
 
         if number_of_records == 1:
             if password_from_DB == password:

@@ -1,8 +1,10 @@
 from sqlalchemy import create_engine, ForeignKey, Boolean, Column, String, Integer, Text, Date
 from sqlalchemy.orm import sessionmaker, declarative_base
-#from Session import DbSession
+
+# from Session import DbSession
 
 Base = declarative_base()
+
 
 class UserInfo(Base):
     __tablename__ = "user_info"
