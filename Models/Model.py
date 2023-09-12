@@ -1,6 +1,6 @@
 from Models.Session import DbSession
 from Models.User_Info_Dao import User_Info_Dao
-
+from Models.Letter_Dao import Letter_Dao
 
 class Model:
 
@@ -9,6 +9,8 @@ class Model:
         self.user_id = 0
         self.session = DbSession().dbsession
         self.user_info_dao = User_Info_Dao(self.session)
+        self.selected_letter_id = 0
+        self.letter_dao = Letter_Dao(self.session)
 
     def user_info_search_by_id(self, user_id):
         print("Recebi no modelo: " + user_id)
@@ -35,6 +37,8 @@ class Model:
             self.user_logged = False
             self.user_id = 0
 
-#newModel = Model()
-#newModel.user_info_dao.list_all_users()
+
+    def handle_letter_submition(self, title, message):
+        print("Modelo a gravar carta")
+        self.letter_dao.add_letter( self.user_id, 0, title, message)
 

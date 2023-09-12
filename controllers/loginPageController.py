@@ -39,8 +39,9 @@ class LoginPageController:
 
         if self.model.user_logged == True:
             print("Registado com sucesso")
-            #Avançar para o próximo ecrã
-
+            self.view.switch("welcomePage")
+        else:
+            print("Erro a registar")
 
     def click_login(self):
         login_nickname = self.frame.Input_nickname_registed.get()
@@ -51,6 +52,7 @@ class LoginPageController:
         self.model.handle_user_login(login_nickname, login_password)
         if self.model.user_logged == True:
             print("Login Efetuado com sucesso")
+            self.view.switch("welcomePage")
         else:
             print("Erro a e efutaur login")
 

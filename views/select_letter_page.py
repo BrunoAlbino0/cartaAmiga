@@ -1,6 +1,6 @@
 from tkinter import Frame, Label, Button,PhotoImage,Entry
 
-class WelcomePage(Frame):
+class SelectLetterPage(Frame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -12,8 +12,5 @@ class WelcomePage(Frame):
         self.btn_Exit = Button(self, text="Exit")
         self.btn_Exit.grid(row=0, column=1, padx=10, pady=10)
 
-        self.welcome_label = Label(self, text="Welcome! Click to enter", font=("Radley", 41))
-        self.welcome_label.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
-
-        self.btn_Welcome = Button(self, text="welcome")
-        self.btn_Welcome.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+        self.label_New_Letters = Label(self, text="New Letters", font=("Radley", 41))
+        self.label_New_Letters.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
