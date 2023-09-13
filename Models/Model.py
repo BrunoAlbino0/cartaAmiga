@@ -45,3 +45,6 @@ class Model:
 
     def handle_letter_request(self):
         return self.letter_dao.get_all_letters()
+
+    def get_letter_data(self):
+        return self.letter_dao.get_letter_by_id(self.selected_letter_id)

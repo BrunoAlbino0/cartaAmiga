@@ -12,7 +12,7 @@ class LetterPageController:
         self.frame.btn_Exit.config(command=self.click_on_exit)
         self.frame.btn_go_back.config(command=self.click_on_back)
         self.frame.btn_save_letter.config(command=self.click_on_save)
-
+        self.frame.btn_show_letter.config(command=self.mostra_carta)
     def click_on_welcome(self):
         print("Welcome")
         self.view.switch("welcomePage")
@@ -22,7 +22,12 @@ class LetterPageController:
         self.view.stop_mainloop()
 
     def click_on_back(self):
-        self.view.switch("menuPage")
+        if self.model.selected_letter_id == 0:
+            self.view.switch("menuPage")
+        else:
+            self.model.selected_letter_id = 0
+            self.view.switch("selectLetterPage")
+
 
     def click_on_save(self):
         print("Click on save")
@@ -35,5 +40,12 @@ class LetterPageController:
         else:
             print("Insira um titulo e o conteudo da carta")
 
-
-
+    def mostra_carta(self):
+        if self.model.selected_letter_id == 0:
+            self.frame.Input_letter_tittle.insert(0, "")
+            self.frame.Input_letter_content.insert(0, "")
+        else:
+            letter_data = self.model.get_letter_data()
+            if len(letter_data) > 0:
+                self.frame.Input_letter_tittle.insert(0, letter_data[0])
+                self.frame.Input_letter_content.insert(0, letter_data[1])

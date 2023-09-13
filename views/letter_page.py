@@ -27,3 +27,7 @@ class LetterPage(Frame):
 
         self.btn_save_letter = Button(self, text="Save")
         self.btn_save_letter.grid(row=5, column=1, padx=10, pady=10)
+
+        self.btn_show_letter = Button(self, text="Show Selected_Letter")
+        self.btn_show_letter.grid(row=6, column=0, padx=10, pady=10)
+

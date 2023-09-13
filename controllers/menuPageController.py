@@ -16,6 +16,7 @@ class MenuPageController:
 
     def click_on_write(self):
         print("Click on write")
+        self.model.selected_letter_id = 0
         self.view.switch("letterPage")
     def click_on_read(self):
         print("Click on read")
