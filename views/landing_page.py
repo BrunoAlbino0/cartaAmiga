@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import Frame, Label, Button,PhotoImage
 #Para fazer a importação https://blog.finxter.com/how-to-install-pillow-on-pycharm/
 from PIL import Image, ImageTk

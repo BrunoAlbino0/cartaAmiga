@@ -1,5 +1,7 @@
 from Models.Model import Model
 from views.main import View
+from tkinter import END
+
 class LetterPageController:
     def __init__(self, model, view):
         self.model = model
@@ -32,8 +34,8 @@ class LetterPageController:
     def click_on_save(self):
         print("Click on save")
 
-        title = self.frame.Input_letter_tittle.get()
-        message = self.frame.Input_letter_content.get()
+        title = self.frame.Input_letter_tittle.get("1.0", END)
+        message = self.frame.Input_letter_content.get("1.0", END)
 
         if len(title) != 0 or len(message) != 0:
             self.model.handle_letter_submition(title, message)
@@ -42,10 +44,10 @@ class LetterPageController:
 
     def mostra_carta(self):
         if self.model.selected_letter_id == 0:
-            self.frame.Input_letter_tittle.insert(0, "")
-            self.frame.Input_letter_content.insert(0, "")
+            self.frame.Input_letter_tittle.insert("1.0", "")
+            self.frame.Input_letter_content.insert("1.0", "")
         else:
             letter_data = self.model.get_letter_data()
             if len(letter_data) > 0:
-                self.frame.Input_letter_tittle.insert(0, letter_data[0])
-                self.frame.Input_letter_content.insert(0, letter_data[1])
+                self.frame.Input_letter_tittle.insert("1.0", letter_data[0])
+                self.frame.Input_letter_content.insert("1.0", letter_data[1])
