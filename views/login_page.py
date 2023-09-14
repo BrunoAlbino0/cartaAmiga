@@ -9,6 +9,8 @@ class LoginPage(Frame):
         background_color = "#f6a2a6"
         main_tittle_color = "#ffffff"
         input_color = "#f2d0cb"
+        labels_font = ("Radley", 12, "bold")
+
         self.configure(bg=background_color)
 
         self.grid_columnconfigure(0, weight=1)
@@ -23,15 +25,15 @@ class LoginPage(Frame):
         self.label_new_user = Label(self, text="New User: Registrate ", font=("Radley", 25, "bold"), bg=background_color)
         self.label_new_user.grid(row=1, column=0, columnspan=3, padx=10, pady=10, sticky="we")
 
-        self.label_nickname_unregisted = Label(self, text="nick name", bg=background_color)
+        self.label_nickname_unregisted = Label(self, text="Nick name:", bg=background_color, font=labels_font)
         self.Input_nickname_unregisted = Entry(self, bg=input_color)
         self.label_nickname_unregisted.grid(row=2, column=0, padx=10, sticky="w")
-        self.Input_nickname_unregisted.grid(row=2, column=1, padx=(0, 20), sticky="we")
+        self.Input_nickname_unregisted.grid(row=2, column=0, padx=(110, 20), sticky="we")
 
-        self.label_password_unregisted = Label(self, text="Password:", bg=background_color)
+        self.label_password_unregisted = Label(self, text="Password:", bg=background_color, font=labels_font)
         self.Input_password_unregisted = Entry(self, show="*", bg=input_color)
         self.label_password_unregisted.grid(row=3, column=0, padx=10, sticky="w")
-        self.Input_password_unregisted.grid(row=3, column=1, padx=(0, 20), sticky="we")
+        self.Input_password_unregisted.grid(row=3, column=0, padx=(110, 20), sticky="we")
 
         self.btn_Regist_New_User = Button(self, text="Registar:")
         self.btn_Regist_New_User.grid(row=2, column=2, padx=10, pady=10, rowspan=2)
@@ -40,15 +42,15 @@ class LoginPage(Frame):
         self.label_registed_user = Label(self, text="Registrate User:Login ", font=("Radley", 25, "bold"), bg=background_color)
         self.label_registed_user.grid(row=4, column=0, columnspan=3, padx=10, pady=10, sticky="we")
 
-        self.label_nickname_registed = Label(self, text="nick name", bg=background_color)
+        self.label_nickname_registed = Label(self, text="Nick name:", bg=background_color, font=labels_font)
         self.Input_nickname_registed = Entry(self, bg=input_color)
         self.label_nickname_registed.grid(row=5, column=0, padx=10, sticky="w")
-        self.Input_nickname_registed.grid(row=5, column=1, padx=(0, 20), sticky="we")
+        self.Input_nickname_registed.grid(row=5, column=0, padx=(110, 20), sticky="we")
 
-        self.label_password_registed = Label(self, text="Password", bg=background_color)
+        self.label_password_registed = Label(self, text="Password:", bg=background_color, font=labels_font)
         self.Input_password_registed = Entry(self, show="*", bg=input_color)
         self.label_password_registed.grid(row=6, column=0, padx=10, sticky="w")
-        self.Input_password_registed.grid(row=6, column=1, padx=(0, 20), sticky="we")
+        self.Input_password_registed.grid(row=6, column=0, padx=(110, 20), sticky="we")
 
         self.btn_Login = Button(self, text="Login")
 

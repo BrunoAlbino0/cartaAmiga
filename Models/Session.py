@@ -1,9 +1,12 @@
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
 class DbSession:
-    connection_string = "mysql+mysqlconnector://b3fzksidqav8cwc13x8a:pscale_pw_x0l8zGXZn9RDaB1YvNDwT21qe9XkFS3akOVg0uFqMDB@aws.connect.psdb.cloud:3306/cartaamiga"
+    connection_string =os.getenv("DATABASE_CONNECTION")
 
     def __init__(self):
         self.engine = create_engine(self.connection_string, echo=True)
