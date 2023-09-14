@@ -35,11 +35,11 @@ class LoginPage(Frame):
         self.label_password_unregisted.grid(row=3, column=0, padx=10, sticky="w")
         self.Input_password_unregisted.grid(row=3, column=0, padx=(110, 20), sticky="we")
 
-        self.btn_Regist_New_User = Button(self, text="Registar:")
+        self.btn_Regist_New_User = Button(self, text="Regist")
         self.btn_Regist_New_User.grid(row=2, column=2, padx=10, pady=10, rowspan=2)
 
         #Registraded user
-        self.label_registed_user = Label(self, text="Registrate User:Login ", font=("Radley", 25, "bold"), bg=background_color)
+        self.label_registed_user = Label(self, text="Registrated User:Login ", font=("Radley", 25, "bold"), bg=background_color)
         self.label_registed_user.grid(row=4, column=0, columnspan=3, padx=10, pady=10, sticky="we")
 
         self.label_nickname_registed = Label(self, text="Nick name:", bg=background_color, font=labels_font)
