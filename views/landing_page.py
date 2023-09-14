@@ -17,7 +17,7 @@ class LandingPage(Frame):
         self.grid_columnconfigure(0,weight=1)
 
         self.label_titulo = Label(self, text="Friendly Letter", font=("Radley", 41, "bold"), fg=main_tittle_color, bg=background_color)
-        self.label_secure_communication = Label(self, text="Secure communication", font=("Radley", 30), bg=background_color)
+        self.label_secure_communication = Label(self, text="Secure communication", font=("Radley", 37, "bold"), bg=background_color)
 
         self.label_titulo.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
         self.label_secure_communication.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
