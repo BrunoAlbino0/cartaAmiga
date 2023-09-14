@@ -44,9 +44,12 @@ class LetterPageController:
 
     def mostra_carta(self):
         if self.model.selected_letter_id == 0:
-            self.frame.Input_letter_tittle.insert("1.0", "")
-            self.frame.Input_letter_content.insert("1.0", "")
+            self.frame.Input_letter_tittle.delete("1.0", END)
+            self.frame.Input_letter_content.delete("1.0", END)
         else:
+            self.frame.Input_letter_tittle.delete("1.0", END)
+            self.frame.Input_letter_content.delete("1.0", END)
+
             letter_data = self.model.get_letter_data()
             if len(letter_data) > 0:
                 self.frame.Input_letter_tittle.insert("1.0", letter_data[0])
